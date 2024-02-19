@@ -1,0 +1,89 @@
+/* Current Issues: */
+/* 1. Cannot get Game Div to Center with screen without breaking grid format. */
+/* 2. Cannot get even simple transition animations to work with current code/layout. */
+
+body{
+  background-color: rgb(125, 125, 125);
+  background-image: url("./imgs/transparent-tile.png");
+  /* margin-left: 5em; */
+} 
+
+h1 {
+  color: aliceblue;
+  text-shadow: 0px 2px 4px rgba(0,0,0,0.75);
+  position: static;
+  width: 100%;
+  font-size: 3em;
+  font-weight: bolder;
+  display: flex;
+  justify-content:center;
+}
+
+#timer {
+  color: aliceblue;
+  text-shadow: 0px 2px 4px rgba(0,0,0,0.75);
+  position: static;
+  width: 100%;
+  font-size: 3em;
+  font-weight: bolder;
+  display: flex;
+  justify-content:center;
+  margin-right:20%;
+}
+
+#title {
+  padding: 20px;
+}
+
+#score-placard {
+  padding: 20px;
+}
+
+#game div img {
+  border: 1px solid black;
+  width: 200px;
+  min-width: 200px;
+  height: 200px;
+  min-height: 200px;
+  /* margin: 10px; */
+  /* display: inline-table;*/
+  border-radius: 5px;
+  object-fit: fill;
+  box-shadow: 0 0px 16px rgba(0,0,0,0.15);
+}
+
+#game div {
+  display:inline-flex;
+  justify-content:center;
+}
+
+.card {
+  display:block;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  cursor: pointer;
+  padding: 10px;
+  margin: 0px;
+}
+
+.back img {
+  display: none;
+  position:absolute;
+  visibility: hidden;
+}
+
+.card .front img {
+  position: absolute;
+}
+
+.flipped>.card .back img{
+  display: block;
+  visibility: visible;
+  cursor: initial;
+}
+
+.flipped>.card .front img {
+  visibility: none;
+}
+
